@@ -11,7 +11,10 @@ Fine-grained embedding-based entity typing
 To run the experiment, you have to download the two files.
 Then, you can run the script:
 
+
+```
 sh gm.sh
+```
 
 It will train the MLPs, apply on the test entities, and finally output the 
 measurements (micro F1, macro F1). 
