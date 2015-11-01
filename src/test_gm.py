@@ -16,8 +16,8 @@ from theano.tensor.nnet import conv
 from theano.tensor.signal import downsample
 import theano.tensor as T
 
-import src.classification.nn.model.layers as layers
-import src.classification.common.myutils as utils
+import layers as layers
+import myutils as utils
 
 
 theano.config.exception_verbosity='high'
@@ -25,16 +25,10 @@ theano.config.exception_verbosity='high'
 print 'loading config file'
 config = utils.loadConfig(sys.argv[1])
 
-
 networkfile = config['net']
 num_of_hidden_units = int(config['hidden_units'])
-
 targetTypesFile=config['typefile']
-
 vectorFile=config['ent_vectors']
-contextsize = 1#int(config['contextsize'])
-
-#learning parameters
 learning_rate = float(config['lrate'])
 batch_size = 1#int(config['batchsize'])
 n_epochs = int(config['nepochs'])
@@ -47,9 +41,8 @@ outputtype = config['outtype'] #hinge or softmax
 usetypecosine = False
 if 'typecosine' in config:
     usetypecosine = utils.str_to_bool(config['typecosine'])
-    
-(t2ind, n_targets, wordvectors, vectorsize, typefreq_traindev) = utils.loadTypesAndVectors(targetTypesFile, vectorFile)
 
+(t2ind, n_targets, wordvectors, vectorsize, typefreq_traindev) = utils.loadTypesAndVectors(targetTypesFile, vectorFile)
 (rvt, input_matrix_test, iet,resvectstnall, ntrn) = utils.fillOnlyEntityData(testfile,vectorsize, wordvectors, t2ind, n_targets, upto=-1, ds='test', binoutvec=True)
 
 # train network

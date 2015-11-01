@@ -5,17 +5,11 @@ import os
 import time
 from random import shuffle
 import math, logging
-from src.classification.nn.algorithms import compute_ada_grad_updates
-#from src.classification.nn import minimal_of_list
-sys.path.append(os.path.abspath('/mounts/Users/student/yadollah/new_ws/phdworks/'))
+from algorithms import compute_ada_grad_updates
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 logger = logging.getLogger('gm_multi_out')
-
-from src.classification.nn import minimal_of_list
-import src.classification.nn.model.layers as mlp
-import src.classification.nn.model.layers as outlayer
-import src.classification.common.myutils as utils
-
+import layers as layers
+import myutils as utils
 
 # import pprint
 import numpy
@@ -105,7 +99,7 @@ y = T.imatrix('y')  # the labels are presented as 1D vector of  multi
 ######################
 logger.info('... building the model')
 rng = numpy.random.RandomState(23455)
-layer1 = mlp.HiddenLayer(rng, input=x, n_in=input_matrix_train.shape[1], n_out=num_of_hidden_units, activation=T.tanh)
+layer1 = layers.HiddenLayer(rng, input=x, n_in=input_matrix_train.shape[1], n_out=num_of_hidden_units, activation=T.tanh)
 
 outlayers = []
 cost = 0.
@@ -113,8 +107,8 @@ out_errors = []
 total_errs = 0
 params = layer1.params
 for i in range(n_targets):
-    oneOutLayer = outlayer.OutputLayer(input=layer1.output, n_in=num_of_hidden_units, n_out=2)
-    onelogistic = outlayer.SoftmaxLoss(input=oneOutLayer.score_y_given_x, n_in=2, n_out=2)
+    oneOutLayer = layers.OutputLayer(input=layer1.output, n_in=num_of_hidden_units, n_out=2)
+    onelogistic = layers.SoftmaxLoss(input=oneOutLayer.score_y_given_x, n_in=2, n_out=2)
     params += oneOutLayer.params
     outlayers.append(oneOutLayer)
     total_errs += onelogistic.errors(y[:,i])
@@ -184,7 +178,7 @@ while (epoch < n_epochs) and (not done_looping):
                 logger.info('epoch %i, iteration %i, validation cost %f , train cost %f ' % \
                       (epoch, iter, this_validation_loss, cost_ij))
 
-                if this_validation_loss < minimal_of_list(val_losses):
+                if this_validation_loss < utils.minimal_of_list(val_losses):
                     del val_losses[:]
                     val_losses.append(this_validation_loss)
                     best_iter = iter

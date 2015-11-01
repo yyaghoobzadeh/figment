@@ -2,7 +2,7 @@
 
 #finding thresholds from summarized scores for each entity2type
 Etestfreq = [5, 10, 30, 100]
-from src.classification.common.myutils import * 
+from myutils import * 
 import string,collections, sys
 upto = -1
 config = loadConfig(sys.argv[1])

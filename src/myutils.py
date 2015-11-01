@@ -756,3 +756,10 @@ def precisionAt(unsortedlist, topnum=20):
     if topnum == 0:
         return 0.0
     return good / topnum
+
+def minimal_of_list(list_of_ele):
+    if len(list_of_ele) ==0:
+        return 1e10
+    else:
+        return list_of_ele[0]
+    

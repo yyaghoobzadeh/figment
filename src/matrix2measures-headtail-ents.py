@@ -2,7 +2,7 @@
 
 #finding thresholds from summarized scores for each entity2type
 
-from src.classification.common.myutils import * 
+from myutils import * 
 import string,collections, sys
 config = loadConfig(sys.argv[1])
 print 'loading cofing ',config

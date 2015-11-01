@@ -18,7 +18,7 @@ References:
                  Christopher M. Bishop, section 5
 
 """
-from src.classification.common.myutils import debug_print
+from myutils import debug_print
 __docformat__ = 'restructedtext en'
 
 
