@@ -1,4 +1,4 @@
-# figment
+# FIGMENT
 Fine-grained embedding-based entity typing
 
 <ul>
