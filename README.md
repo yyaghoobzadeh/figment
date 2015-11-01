@@ -21,6 +21,7 @@ measurements (micro F1, macro F1).
 
 Please read this paper for more information:
 
-*Corpus-level Fine-grained Entity Typing Using Contextual Information* Yadollah Yaghoobzadeh, Hinrich schütze. (EMNLP2015)
+*Corpus-level Fine-grained Entity Typing Using Contextual Information*.
+Yadollah Yaghoobzadeh, Hinrich schütze. (EMNLP2015)
 https://aclweb.org/anthology/D/D15/D15-1083.pdf
 
