@@ -349,11 +349,11 @@ def fillOnlyEntityData(myname, vectorsize, wordvectors, type2ind, n_targets, upt
         c += 1
         if c == upto and upto != -1:
             break
-#     targetMatrix = numpy.empty(shape=(c, vectorsize))
-#     for i in xrange(0, c):
-#         targetMatrix[i] = myMatrix[i] 
+    targetMatrix = numpy.empty(shape=(c, vectorsize))
+    for i in xrange(0, c):
+        targetMatrix[i] = myMatrix[i] 
 #     print 'length targetMatrix: ' + str(len(targetMatrix))
-    return(resultVector, myMatrix, inputEntities, allTypesResultVector, binntvec)
+    return(resultVector, targetMatrix, inputEntities, allTypesResultVector, binntvec)
 
 def debug_print(var, name, PRINT_VARS=True):
     """Wrap the given Theano variable into a Print node for debugging.
