@@ -7,6 +7,7 @@ import numpy, os, sys, logging, string, random
 from _collections import defaultdict
 import gzip, bz2
 import multiprocessing
+from multiprocessing.pool import Pool
 import theano
 import math
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
@@ -21,6 +22,7 @@ def str_to_bool(s):
         return False
     else:
         raise ValueError # evil ValueError that doesn't tell you what the wrong value was
+    
 class NoDaemonProcess(multiprocessing.Process):
     def _get_daemon(self):
         return False
@@ -28,7 +30,7 @@ class NoDaemonProcess(multiprocessing.Process):
         pass
     daemon = property(_get_daemon, _set_daemon)
 
-class MyPool(multiprocessing.pool.Pool):
+class MyPool(Pool):
     Process = NoDaemonProcess
 
 def myopen(filename, mode='r'):
