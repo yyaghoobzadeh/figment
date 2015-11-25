@@ -8,6 +8,7 @@ Fine-grained embedding-based entity typing
 
 
 To run the experiment, you have to download the two files.
+
 Then, you can run the script:
 
 
@@ -15,11 +16,13 @@ Then, you can run the script:
 sh gm.sh
 ```
 
-It will train the MLPs, apply on the test entities, and finally output the 
+It will train an MLP on train entities, apply on the test & dev entities, and finally output the 
 measurements (micro F1, macro F1). 
 
+Currently, only the Global Model (GM) code is available here. 
 
-Please read this paper for more information:
+
+For more information, you can this paper:
 
 *Corpus-level Fine-grained Entity Typing Using Contextual Information*.
 Yadollah Yaghoobzadeh, Hinrich schütze. (EMNLP2015)
