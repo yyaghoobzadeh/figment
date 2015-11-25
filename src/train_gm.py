@@ -59,7 +59,7 @@ usetypecosine = False
 if 'typecosine' in config:
     usetypecosine = utils.str_to_bool(config['typecosine'])
     
-upto = 100
+upto = -1
 (t2ind, n_targets, wordvectors, vectorsize, typefreq_traindev) = utils.loadTypesAndVectors(targetTypesFile, vectorFile, upto=upto)
 
 (rvt, input_matrix_train, iet,resvectrnall, ntrn) = utils.fillOnlyEntityData(trainfile,vectorsize, wordvectors, t2ind, n_targets, upto=upto, binoutvec=True)
