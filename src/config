@@ -19,4 +19,5 @@ hidden_units=300
 loss_reg=L2
 matrixtest=test.probs
 train_script=train_gm.py
+numneg=1
                                                   
