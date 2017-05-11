@@ -128,9 +128,9 @@ def calcPrintMeasures(myetest, findGoodEnts=False):
         (pr , re, f ) = calcPRF(goods[i], bads[i], totals[i])
         print i, 'Prec: ', ff.format(pr), ' Reca: ', ff.format(re), ' F1: ',ff.format(f) 
     
-    print '**measures based on NNLB: '
+    print '**measures based on NNPLB: '
     for i in range(numScorePerType):
-        print i, 'Prec@1: ', ff.format(goodsAt1[i] / len(myetest)), 'Avg F1: ', ff.format(f_nnlb[i] / len(myetest))
+        print i, 'Prec@1: ', ff.format(goodsAt1[i] / len(myetest)), 'Avg F1(BEP): ', ff.format(f_nnlb[i] / len(myetest))
         
 #     if findGoodEnts == True:
 #         writeGoodEnts(correctEntititesP1)
