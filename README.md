@@ -22,9 +22,9 @@ measurements (micro F1, macro F1).
 Currently, only the Global Model (GM) code is available here. 
 
 
-For more information, you can this paper:
+More information about the models is in this paper:
 
-*Corpus-level Fine-grained Entity Typing Using Contextual Information*.
-Yadollah Yaghoobzadeh, Hinrich schütze. (EMNLP2015)
-https://aclweb.org/anthology/D/D15/D15-1083.pdf
+<a href="https://github.com/yyaghoobzadeh/figment/blob/master/EMNLP2015figment.pdf
+">*Corpus-level Fine-grained Entity Typing Using Contextual Information*</a>,
+Yadollah Yaghoobzadeh, Hinrich schütze. (EMNLP2015). 
 
