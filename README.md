@@ -22,13 +22,24 @@ measurements (micro F1, macro F1).
 Currently, only the Global Model (GM) code is available here. 
 
 
-More information about the models is in this paper:
+If you use any data or code, please cite the following paper:
 
-<a href="https://github.com/yyaghoobzadeh/figment/blob/master/EMNLP2015figment.pdf
-">*Corpus-level Fine-grained Entity Typing Using Contextual Information*</a>,
-Yadollah Yaghoobzadeh, Hinrich schütze. (EMNLP2015). 
+```
+@inproceedings{yaghoobzadeh2015,
+  author    = {Yadollah Yaghoobzadeh and
+               Hinrich Sch{\"{u}}tze},
+  title     = {Corpus-level Fine-grained Entity Typing Using Contextual Information},
+  booktitle = {Proceedings of the 2015 Conference on Empirical Methods in Natural
+               Language Processing, {EMNLP} 2015, Lisbon, Portugal, September 17-21,
+               2015},
+  pages     = {715--725},
+  year      = {2015},
+  url       = {http://aclweb.org/anthology/D/D15/D15-1083.pdf}
+}
+```
 
 
-LICENSE
+
+##LICENSE
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
