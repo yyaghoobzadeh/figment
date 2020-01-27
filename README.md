@@ -1,5 +1,6 @@
-![asdf](https://i.pinimg.com/originals/59/88/de/5988de958adf325cabbfa7e6e233ceb2.gif)
+![] (https://i.pinimg.com/originals/59/88/de/5988de958adf325cabbfa7e6e233ceb2.gif | width=100)
 
+(https://i.pinimg.com/originals/59/88/de/5988de958adf325cabbfa7e6e233ceb2.gif)
 # FIGMENT
 Fine-grained embedding-based entity typing
 
