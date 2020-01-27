@@ -1,4 +1,4 @@
-<img width="100" alt="portfolio_view" src="https://i.pinimg.com/originals/59/88/de/5988de958adf325cabbfa7e6e233ceb2.gif">
+<img width="150" alt="portfolio_view" src="https://i.pinimg.com/originals/59/88/de/5988de958adf325cabbfa7e6e233ceb2.gif">
 
 # FIGMENT
 Fine-grained embedding-based entity typing
